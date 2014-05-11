@@ -24,7 +24,7 @@ public class KMTArtist extends Artist{
         super(a.getName(), a.getUrl());
                 //this.getSimilar(); Artist.getSimilar(s,5,Main1.key);
         int i=0; //Artist.getSimilar()
-        similar1=Artist.getSimilar(this.name, 5, Main1.key);
+        similar1=Artist.getSimilar(this.getName(), 5, Main1.key);
         for (Artist artist : similar1) {
             similar.add(new KMTArtist(artist));
             artists1[i]=artist.getName();
