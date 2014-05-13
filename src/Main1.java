@@ -5,11 +5,13 @@ import java.util.Collection;
 public class Main1 {
     public static Collection<String> artists1;
     public static String key;
+
     public static void main(String[] args) {
         key = "014e37a523f39ad113d20ef8ee47bf78"; // Last.fm API key
         Caller.getInstance().setUserAgent("tst");
        // String user = "inv151ble";
-        WindowFrame userInterface = new WindowFrame();
+       KMTUser kmtUser = new KMTUser();
+       WindowFrame userInterface = new WindowFrame();
      /*  // Chart<Artist> chart = Artist.getSimilar(KMTQuery.uArtName,1,key);
         DateFormat format = DateFormat.getDateInstance();
       //  String from = format.format(chart.getFrom());

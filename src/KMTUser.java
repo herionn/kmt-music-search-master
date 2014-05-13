@@ -33,7 +33,7 @@ public KMTUser() {
     }
 
 }
-    public void saveSettings(){
+    public static void saveSettings(){
 
         Properties prop = new Properties();
         OutputStream output = null;

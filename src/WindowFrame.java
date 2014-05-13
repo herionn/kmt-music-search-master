@@ -8,6 +8,7 @@ public class WindowFrame extends JFrame
     static JTextField[] userOut = new JTextField[5];
     static JTextField userTag;
     static JButton searchButton;
+    static JButton optionButton;
     static Choice userPopularity;
     static Choice userHistory;
     eHendler hendler = new eHendler();
@@ -43,6 +44,12 @@ public class WindowFrame extends JFrame
         searchButton.setText("Search!");
         getContentPane().add(searchButton);
 
+        optionButton = new JButton();
+        optionButton.setLocation(500,420);
+        optionButton.setSize(80,20);
+        optionButton.setText("Option");
+        getContentPane().add(optionButton);
+
         userPopularity = new Choice();
         userPopularity.setLocation(280,20);
         userPopularity.setSize(106,28);
@@ -54,9 +61,9 @@ public class WindowFrame extends JFrame
         getContentPane().add(userHistory);
 
         setTitle("KMT Music search");
-        setSize(570,387);
+        setSize(600,480);
         setVisible(true);
-        setResizable(true);
+        setResizable(false);
 
         for(int i = 0;i<5; i++){
         userOut[i] = new JTextField();
@@ -71,6 +78,7 @@ public class WindowFrame extends JFrame
 
 
         searchButton.addActionListener(hendler);
+        optionButton.addActionListener(hendler);
     }
 
     public class eHendler implements ActionListener{
@@ -82,6 +90,12 @@ public class WindowFrame extends JFrame
                 KMTQuery UserQuery = new KMTQuery();
 
             }
+
+            if(e.getSource()==optionButton){
+                AdminFrame adminInterface = new AdminFrame();
+
+            }
+
         }
     }
 
